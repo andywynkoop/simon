@@ -2,7 +2,7 @@ var WIDTH = 428; //window.innerWidth*0.8;
 var HEIGHT = 428; //window.innerHeight*0.8;
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xaaaadd, 1);
+renderer.setClearColor(0x333333, 1);
 document.body.appendChild(renderer.domElement);
 var scene = new THREE.Scene();
 //camera + controls
@@ -44,14 +44,14 @@ var audioH = new Audio('audio/Cb.wav');
 //sphere
 var sphereGeometry = new THREE.SphereGeometry(6, 100, 100);
 //materials
-var colorA = new THREE.MeshPhongMaterial({ color: 0x9a0000 });
-var colorB = new THREE.MeshPhongMaterial({ color: 0x357ebd });
-var colorC = new THREE.MeshPhongMaterial({ color: 0xf600ff });
-var colorD = new THREE.MeshPhongMaterial({ color: 0xd4af37 });
-var colorE = new THREE.MeshPhongMaterial({ color: 0x000000 });
-var colorF = new THREE.MeshPhongMaterial({ color: 0xffffff });
-var colorG = new THREE.MeshPhongMaterial({ color: 0x009a00 });
-var colorH = new THREE.MeshPhongMaterial({ color: 0x00009a });
+var colorA = new THREE.MeshPhongMaterial({ color: 0xff084a });
+var colorB = new THREE.MeshPhongMaterial({ color: 0x3399ff });
+var colorC = new THREE.MeshPhongMaterial({ color: 0x9933ff });
+var colorD = new THREE.MeshPhongMaterial({ color: 0xccff00 });
+var colorE = new THREE.MeshPhongMaterial({ color: 0xff7f50 });
+var colorF = new THREE.MeshPhongMaterial({ color: 0xff00ff });
+var colorG = new THREE.MeshPhongMaterial({ color: 0x33ff33 });
+var colorH = new THREE.MeshPhongMaterial({ color: 0xffff33 });
 //sphere
 var sphereA = new THREE.Mesh(sphereGeometry, colorA);
 var sphereB = new THREE.Mesh(sphereGeometry, colorB);
@@ -181,7 +181,7 @@ function spherePop() {
     sphereH.scale.set(0.01, 0.01, 0.01);
 
     setTimeout(function() {
-      renderer.setClearColor(0xaaaadd, 1);
+      renderer.setClearColor(0x333333, 1);
       sphereA.scale.set(1, 1, 1);
       sphereB.scale.set(1, 1, 1);
       sphereC.scale.set(1, 1, 1);
@@ -401,4 +401,3 @@ function render() {
   renderer.render(scene, camera);
 }
 render();
-
