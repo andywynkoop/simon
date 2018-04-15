@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon with Three.JS</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="simonThree.css">
+	<script src="three.min.js"></script>
+	<script src="jquery-3.1.1.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="OrbitControls.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<h1 class="text-center title">Simon Says</h1>
+<p class="text-center" id="instructions">Try to copy the computer's moves by pressing the buttons above the screen that coorespond to the sphere's color. If you see the spheres explode and the screen turns red, you've guessed incorrectly. In strict mode, this will reset the game. In lenient mode, Simon will show you the pattern again, and give you another chance. You can adjust the display window with the mouse if you want a different view, just make sure you can see all of the spheres! You win the game if you complete level 20, but you can keep playing after that if you like. Good Luck!</p>
+<div id="game-info" style="display: none;">
+	<p>Current Score: <span id="score">0</span></p>
+	<p>Level: <span id="level">1</span></p>
+	<p>High Score: <span id="high-score">0</span></p>
+
+</div>
+<div id="winner"><h1 style="color:#009a00">Winner!</h1></div>
+<btn class="btn btn-default" onclick="newGame()">New Game</btn>
+<btn class="btn btn-default" onclick="show()" id="settings">Settings</btn><br>
+<div id="settingsmenu"><span>Settings</span>
+<p>Game Mode: <span id="game-mode" onclick="changeGameMode()">Lenient</span></p>
+<btn class="btn btn-default" onclick="play()" id="song-play">Play me a song!</btn>
+</div>
+<br>
+<script src="simonThree.js"></script>
+<btn class="btn btn-default simon-btn" style="background-color:#9a0000" onclick = "playerMove(0)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#357ebd" onclick = "playerMove(1)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#f600ff" onclick = "playerMove(2)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#d4af37" onclick = "playerMove(3)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#000000" onclick = "playerMove(4)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#ffffff" onclick = "playerMove(5)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#009a00" onclick = "playerMove(6)"></btn>
+<btn class="btn btn-default simon-btn" style="background-color:#00009a" onclick = "playerMove(7)"></btn>
+<btn class="btn btn-default simon-btn" style="display:none"onclick="spherePop()">POP!</btn>
+</div>
+</body>
+</html>
